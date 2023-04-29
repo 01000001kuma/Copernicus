@@ -1,12 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function UserDetail(user) {
 
-  // delete user
-  
-  function delete(user) {
+  const nav = useNavigate()
 
+  // delete user
+
+  function deleteuser(iduser) {
+    axios.post('/api/user/deleteuser', { iduser: iduser })
+      .then((res) => {
+        console.log(res.data[0])
+        alert(res.data)
+        nav(0)
+      }
+      ).catch((err) => {
+        console.log(err)
+      })
   }
 
   return (
@@ -27,7 +38,7 @@ function UserDetail(user) {
 
               <Link to={`/edituser/${user.iduser}`} className='btn btn-success'>Edit</Link>
               &nbsp;
-              <button onClick={()=>{delete(user.name)}} className='btn btn-danger'>Delete</button>
+              <button onClick={()=>{deleteuser(user.name)}} className='btn btn-danger'>Delete</button>
               <hr className='mt-4'></hr>
 
             </div>
