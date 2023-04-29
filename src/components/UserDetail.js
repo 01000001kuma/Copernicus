@@ -1,10 +1,18 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import AOS from 'aos'
 
 function UserDetail(user) {
 
   const nav = useNavigate()
+
+  //animation scrolling  down
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   // delete user
 
@@ -25,7 +33,7 @@ function UserDetail(user) {
         <div className='container'>
           <div className='row'>
 
-            <div className='col-sm-6 offset-3'>
+            <div className='col-sm-6 offset-3' data-aos='flip-right'>
 
               <ul className='list-group'>
                 <li className='list-group-item'>Name: {user.name}</li>

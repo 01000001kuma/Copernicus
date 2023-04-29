@@ -1,7 +1,8 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const EditUser = () => {
 
@@ -13,6 +14,10 @@ const EditUser = () => {
   const [company, setCompany] = useState('')
   const [country, setCountry] = useState('')
   const [iduser, setIduser] = useState('')
+
+  //To get back home
+
+  const navegar = useNavigate()
 
   useEffect(() => {
     axios.post('/api/user/obtaildatauser', { iduser: params.iduser })
@@ -47,7 +52,9 @@ const EditUser = () => {
     axios.post('/api/user/updating', updateUser)
       .then((res) => {
         console.log(res.data)
-        alert(res.data)
+        // alert(res.data)
+        Swal.fire(res.data, 'User updated successfully')
+        navegar('/')
       }).then((err) => {
         console.log(err)
         alert('Error updating user')

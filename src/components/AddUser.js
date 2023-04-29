@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { uniqueId } from 'lodash';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const AddUser = () => {
   const [name, setName] = useState('');
@@ -24,7 +25,8 @@ const AddUser = () => {
     axios
       .post('/api/user/adding', user)
       .then((res) => {
-        alert(res.data);
+        // alert(res.data);
+        Swal.fire('User added successfully')
       })
       .catch((err) => {
         console.log(err);
