@@ -12,11 +12,11 @@ const AddUser = () => {
 
   const adding = () => {
     const user = {
-      name,
-      last,
-      email,
-      company,
-      country,
+      name: name,
+      last: last,
+      email: email,
+      company: company,
+      country: country,
       iduser: uniqueId(),
     };
     console.log(user);

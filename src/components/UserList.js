@@ -10,6 +10,7 @@ const UserList = () => {
   useEffect(() => {
     axios.get('/api/user/list').then((res) => {
       console.log(res.data)
+      setDataUsers(res.data)
     }).catch((err) => {
       console.log(err)
     })
