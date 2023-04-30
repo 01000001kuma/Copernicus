@@ -20,6 +20,8 @@ const UserList = () => {
       });
   }, [currentPage]);
 
+  //Pagination
+
   const handlePrevPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -30,7 +32,7 @@ const UserList = () => {
 
   const userList = dataUsers.map((user) => {
     return (
-      <div key={user.id}>
+      <div key={user._id}>
         <UserDetail user={user} />
       </div>
     );
@@ -40,12 +42,14 @@ const UserList = () => {
     <>
       <h2>UserList</h2>
       {userList}
+      <div className="d-flex justify-content-center mt-3">
       {currentPage > 1 && (
-        <button onClick={handlePrevPage}>Previous</button>
+        <button className="btn btn-primary me-3" onClick={handlePrevPage}>Previous</button>
       )}
       {totalPages && currentPage < totalPages && (
-        <button onClick={handleNextPage}>Next</button>
+        <button className="btn btn-primary" onClick={handleNextPage}>Next</button>
       )}
+      </div>
     </>
   );
 };

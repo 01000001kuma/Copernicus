@@ -39,27 +39,29 @@ const EditUser = () => {
   //Updating user
 
   function updating() {
-    const updateUser = {
-      name: name,
-      last: last,
-      email: email,
-      company: company,
-      country: country,
-      iduser: params.iduser()
-    }
-    console.log(updateUser)
+  const updateUser = {
+    name: name,
+    last: last,
+    email: email,
+    company: company,
+    country: country,
+    iduser: params.iduser
+  };
+  console.log(updateUser);
 
-    axios.post('/api/user/updating', updateUser)
-      .then((res) => {
-        console.log(res.data)
-        // alert(res.data)
-        Swal.fire(res.data, 'User updated successfully')
-        navegar('/')
-      }).then((err) => {
-        console.log(err)
-        alert('Error updating user')
-      })
-  }
+  axios
+    .post('/api/user/updating', updateUser)
+    .then((res) => {
+      console.log(res.data);
+      // alert(res.data)
+      Swal.fire(res.data, 'User updated successfully');
+      navegar('/');
+    })
+    .catch((err) => { // added catch block to handle errors
+      console.log(err);
+      alert('Error updating user');
+    });
+}
 
   return (
     <div className='container'>
