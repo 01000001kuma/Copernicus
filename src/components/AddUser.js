@@ -25,8 +25,8 @@ const AddUser = () => {
     axios
       .post('/api/user/adding', user)
       .then((res) => {
-        // alert(res.data);
         Swal.fire('User added successfully');
+        window.location.href = '/';
       })
       .catch((err) => {
         console.log(err);
@@ -37,7 +37,7 @@ const AddUser = () => {
   return (
     <div className='container'>
       <div className='row'>
-        <h2 className='mt-4'>Add User</h2>
+        <h2 className="text-center my-5">Add User</h2>
       </div>
 
       <div className='row'>

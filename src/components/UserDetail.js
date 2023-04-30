@@ -1,30 +1,27 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import AOS from 'aos';
+import Swal from 'sweetalert2';
 
 function UserDetail(props) {
-  const nav = useNavigate();
-
-  //animation scrolling  down
   useEffect(() => {
     AOS.init();
   }, []);
 
-  // delete user
-  function deleteuser(iduser) {
+  const deleteUser = () => {
     axios
-      .post('/api/user/deleteuser', { iduser: iduser })
+      .post('/api/user/deleteuser', { id: props.user._id })
       .then((res) => {
         console.log(res.data[0]);
-        alert(res.data);
-        nav(0);
+        Swal.fire(res.data);
+        props.onDeleteUser(props.user._id);
       })
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
 
   const user = props.user;
 
@@ -39,13 +36,13 @@ function UserDetail(props) {
               <li className='list-group-item'>Email: {user.email}</li>
               <li className='list-group-item'>Company: {user.company}</li>
               <li className='list-group-item'>Country: {user.country}</li>
-              <li className='list-group-item'>Id: {user.id}</li>
+              <li className='list-group-item'>Id: {user._id}</li>
             </ul>
-            <Link to={`/edituser/${user.id}`} className='btn btn-success'>
+            <Link to={`/edit-user/${user._id}`} className='btn btn-success'>
               Edit
             </Link>
             &nbsp;
-            <button onClick={() => deleteuser(user.id)} className='btn btn-danger'>
+            <button onClick={deleteUser} className='btn btn-danger'>
               Delete
             </button>
             <hr className='mt-4' />
