@@ -26,11 +26,11 @@ const AddUser = () => {
       .post('/api/user/adding', user)
       .then((res) => {
         // alert(res.data);
-        Swal.fire('User added successfully')
+        Swal.fire('User added successfully');
       })
       .catch((err) => {
         console.log(err);
-        alert('Error adding user');
+        Swal.fire('Error adding user');
       });
   };
 
