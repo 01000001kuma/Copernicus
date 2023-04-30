@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<UserList />} />
           <Route path="/adduser" element={<AddUser />} />
-          <Route path="/edit-user/:_id" element={<EditUser />} />
+          <Route path="/edit-user" element={<EditUser />} />
         </Routes>
       </BrowserRouter>
 
