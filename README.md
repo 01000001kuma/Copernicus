@@ -1,70 +1,136 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Prueba tecnica
 
-## Available Scripts
+Technical interview Copernicus
 
-In the project directory, you can run:
 
-### `npm start`
+## Appendix
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a CRUD api with database on MongoDB
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This app has 3 screens.
 
-### `npm test`
+1. Users list
+2. Users Details
+3. Add Users Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Author
 
-### `npm run build`
+- [Adrian Molina Illera](https://github.com/01000001kuma?tab=repositories)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Client:** React, javascript, html, css
+**Server:** Node.js, Express.js, MongoDB
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Reference
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Get all items
 
-## Learn More
+```http
+  mongodb+srv://aKuma:****@supercuster.guubw.mongodb.net/?retryWrites=true&w=majority
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Get item
 
-### Code Splitting
+```http
+  mongodb+srv://aKuma:****@supercuster.guubw.mongodb.net/?retryWrites=true&w=majority
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Badges
 
-### Advanced Configuration
+Add badges from somewhere like: [shields.io](https://shields.io/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-### Deployment
+## Color Reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Color Palette | rgb(178, 204, 247) |
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots
+
+![App Screenshot](https://i.postimg.cc/DwCCR3WM/Fire-Shot-Capture-110-Copernicus-localhost.png)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/01000001kuma/Copernicus
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Running Tests
+
+To run tests with jest, run the following command
+
+```bash
+  npm run test
+```
+
+
+## 🚀 About Me
+I am well-versed in many aspects of React development, from setting up the environment to creating components. I have also worked with HTML, CSS (SCSS, SaaS), SVG (elements and animations), JavaScript, and some backend technologies like NodeJS and Express. If your technologies match mine let me help you solve that problem.
+
+Cultivating my creativity with interesting projects is essential. I'm highly organized and love working with clients and fulfilling their needs. I have a solid knowledge of the management, operation, logistics, and development of all activities related to e-commerce software companies and start-ups. 
+
+Teamwork makes the dream work. 
+
+I'm passionate about developing products and enhancing my creativity along the way. I would describe myself as an energetic and decisive person. In my professional career, I've been focused on evaluating operational needs in order to offer solutions to save costs and increase benefits and customer satisfaction.
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://adrianmol.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrian-molina/)
+
+
+## Features
+
+- Loading spinner
+- Itunes api
+- Audio player
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
