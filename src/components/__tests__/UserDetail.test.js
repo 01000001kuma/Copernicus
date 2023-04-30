@@ -98,4 +98,5 @@ describe('User API', () => {
       expect(res.status).toBe(404);
       expect(res.text).toBe('User not found');
     });
-  });
+    });
+});
